@@ -1,6 +1,9 @@
 import React from 'react'
 
-import type { IconName } from '@fortawesome/fontawesome-svg-core'
+import type {
+  IconDefinition,
+  IconName,
+} from '@fortawesome/fontawesome-svg-core'
 import { faCoffee, faUser, fas } from '@fortawesome/free-solid-svg-icons'
 import { render, screen } from '@testing-library/react'
 
@@ -18,7 +21,10 @@ describe('FontAwesomeIcon', () => {
       const svg = document.querySelector('svg')
 
       expect(svg).toBeInTheDocument()
-      expect(svg).toHaveAttribute('viewBox', '0 0 640 512')
+      expect(svg).toHaveAttribute(
+        'viewBox',
+        `0 0 ${faCoffee.icon[0]} ${faCoffee.icon[1]}`,
+      )
       expect(svg).toHaveAttribute('aria-hidden', 'true')
       expect(svg).toHaveAttribute('focusable', 'false')
     })
@@ -44,7 +50,8 @@ describe('FontAwesomeIcon', () => {
       const svg = screen.getByTestId('my-icon')
 
       expect(svg).toBeInTheDocument()
-      expect(svg).toHaveStyle({ color: 'red' })
+      // Browser normalizes 'red' to 'rgb(255, 0, 0)'
+      expect(svg).toHaveStyle({ color: 'rgb(255, 0, 0)' })
     })
 
     test('forwards ref to SVG element', () => {
@@ -79,7 +86,10 @@ describe('FontAwesomeIcon', () => {
       const svg = document.querySelector('svg')
 
       expect(svg).toBeInTheDocument()
-      expect(svg).toHaveAttribute('viewBox', '0 0 640 512')
+      expect(svg).toHaveAttribute(
+        'viewBox',
+        `0 0 ${iconDefinition.icon[0]} ${iconDefinition.icon[1]}`,
+      )
       expect(svg).toHaveClass('size-4')
     })
 
@@ -107,19 +117,13 @@ describe('FontAwesomeIcon', () => {
   describe('duotone icons (array paths)', () => {
     test('renders multiple paths for duotone icons', () => {
       // Simulate a duotone icon structure
-      const duotoneIcon = {
+      const duotoneIcon: IconDefinition = {
         prefix: 'fad' as const,
         iconName: 'coffee' as const,
-        icon: [
-          640,
-          512,
-          [],
-          'f0f4',
-          ['M0 0 L10 10', 'M20 20 L30 30'], // Array of paths
-        ],
-      } as const
+        icon: [640, 512, [], 'f0f4', ['M0 0 L10 10', 'M20 20 L30 30']],
+      }
 
-      render(<FontAwesomeIcon icon={duotoneIcon as any} />)
+      render(<FontAwesomeIcon icon={duotoneIcon} />)
 
       const paths = document.querySelectorAll('path')
 
