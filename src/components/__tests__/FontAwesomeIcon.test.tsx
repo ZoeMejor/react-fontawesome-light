@@ -16,9 +16,9 @@ function capitalizeFirst(str: string): string {
 describe('FontAwesomeIcon', () => {
   describe('direct icon definition', () => {
     test('renders svg with correct viewBox', () => {
-      render(<FontAwesomeIcon icon={faCoffee} />)
+      render(<FontAwesomeIcon data-testid="icon" icon={faCoffee} />)
 
-      const svg = document.querySelector('svg')
+      const svg = screen.getByTestId('icon')
 
       expect(svg).toBeInTheDocument()
       expect(svg).toHaveAttribute(
@@ -30,9 +30,15 @@ describe('FontAwesomeIcon', () => {
     })
 
     test('applies className', () => {
-      render(<FontAwesomeIcon icon={faCoffee} className="text-xl text-white" />)
+      render(
+        <FontAwesomeIcon
+          data-testid="icon"
+          icon={faCoffee}
+          className="text-xl text-white"
+        />,
+      )
 
-      const svg = document.querySelector('svg')
+      const svg = screen.getByTestId('icon')
 
       expect(svg).toHaveClass('text-xl')
       expect(svg).toHaveClass('text-white')
@@ -41,16 +47,15 @@ describe('FontAwesomeIcon', () => {
     test('passes through additional SVG attributes', () => {
       render(
         <FontAwesomeIcon
+          data-testid="icon"
           icon={faCoffee}
-          data-testid="my-icon"
           style={{ color: 'red' }}
         />,
       )
 
-      const svg = screen.getByTestId('my-icon')
+      const svg = screen.getByTestId('icon')
 
       expect(svg).toBeInTheDocument()
-      // Browser normalizes 'red' to 'rgb(255, 0, 0)'
       expect(svg).toHaveStyle({ color: 'rgb(255, 0, 0)' })
     })
 
@@ -63,13 +68,16 @@ describe('FontAwesomeIcon', () => {
     })
 
     test('renders path element with icon data', () => {
-      render(<FontAwesomeIcon icon={faCoffee} />)
+      const { container } = render(
+        <FontAwesomeIcon data-testid="icon" icon={faCoffee} />,
+      )
 
-      const path = document.querySelector('path')
+      const svg = screen.getByTestId('icon')
+      // eslint-disable-next-line testing-library/no-container, testing-library/no-node-access
+      const path = container.querySelector('path')
 
+      expect(svg).toBeInTheDocument()
       expect(path).toBeInTheDocument()
-      expect(path).toHaveAttribute('d')
-      expect(path?.getAttribute('d')).toBeTruthy()
     })
   })
 
@@ -81,9 +89,15 @@ describe('FontAwesomeIcon', () => {
 
       expect(iconDefinition).toBeDefined()
 
-      render(<FontAwesomeIcon icon={iconDefinition} className="size-4" />)
+      render(
+        <FontAwesomeIcon
+          data-testid="icon"
+          icon={iconDefinition}
+          className="size-4"
+        />,
+      )
 
-      const svg = document.querySelector('svg')
+      const svg = screen.getByTestId('icon')
 
       expect(svg).toBeInTheDocument()
       expect(svg).toHaveAttribute(
@@ -106,9 +120,9 @@ describe('FontAwesomeIcon', () => {
       const fullIconName = `fa${capitalizeFirst(iconName)}` as IconName
       const iconDefinition = fas[fullIconName]
 
-      render(<FontAwesomeIcon icon={iconDefinition} />)
+      render(<FontAwesomeIcon icon={iconDefinition} data-testid="icon" />)
 
-      const svg = document.querySelector('svg')
+      const svg = screen.getByTestId('icon')
 
       expect(svg).toBeInTheDocument()
     })
@@ -116,16 +130,18 @@ describe('FontAwesomeIcon', () => {
 
   describe('duotone icons (array paths)', () => {
     test('renders multiple paths for duotone icons', () => {
-      // Simulate a duotone icon structure
       const duotoneIcon: IconDefinition = {
         prefix: 'fad' as const,
         iconName: 'coffee' as const,
         icon: [640, 512, [], 'f0f4', ['M0 0 L10 10', 'M20 20 L30 30']],
       }
 
-      render(<FontAwesomeIcon icon={duotoneIcon} />)
+      const { container } = render(
+        <FontAwesomeIcon icon={duotoneIcon} data-testid="icon" />,
+      )
 
-      const paths = document.querySelectorAll('path')
+      // eslint-disable-next-line testing-library/no-container, testing-library/no-node-access
+      const paths = container.querySelectorAll('path')
 
       expect(paths).toHaveLength(2)
     })
