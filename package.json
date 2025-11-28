@@ -1,7 +1,7 @@
 {
-  "name": "@fortawesome/react-fontawesome",
-  "description": "Official React component for Font Awesome",
-  "version": "3.1.0",
+  "name": "@zoemejor/react-fontawesome-light",
+  "description": "Faster React component for Font Awesome",
+  "version": "4.0.0",
   "type": "module",
   "main": "./dist/index.cjs",
   "module": "./dist/index.js",
@@ -22,7 +22,7 @@
     },
     "./package.json": "./package.json"
   },
-  "homepage": "https://github.com/FortAwesome/react-fontawesome",
+  "homepage": "https://getzoe.app",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/FortAwesome/react-fontawesome.git"
@@ -51,7 +51,8 @@
     "WyvernDrexx <github.com/WyvernDrexx>",
     "Jason Lundien <github.com/jasonlundien>",
     "Jon Defresne <github.com/jdufresne>",
-    "Charles Harwood <github.com/charles4221>"
+    "Charles Harwood <github.com/charles4221>",
+    "Mikey Stengel <github.com/CodingDive>"
   ],
   "license": "MIT",
   "scripts": {
@@ -69,8 +70,7 @@
     "validate-types": "tsc --noEmit",
     "install.6": "npm --no-save install @fortawesome/fontawesome-svg-core@6.x @fortawesome/free-solid-svg-icons@6.x",
     "install.7": "npm --no-save install @fortawesome/fontawesome-svg-core@7.x @fortawesome/free-solid-svg-icons@7.x",
-    "clean": "rimraf dist",
-    "prepare": "husky"
+    "clean": "rimraf dist"
   },
   "engines": {
     "node": ">=20"
@@ -115,7 +115,6 @@
     "eslint-plugin-testing-library": "^7.6.6",
     "eslint-plugin-unicorn": "^60.0.0",
     "globals": "^16.3.0",
-    "husky": "^9.1.7",
     "jest": "^30.0.5",
     "jest-environment-jsdom": "^30.0.5",
     "prettier": "^3.6.2",
