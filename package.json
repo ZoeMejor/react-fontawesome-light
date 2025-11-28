@@ -1,6 +1,6 @@
 {
   "name": "@zoemejor/react-fontawesome-light",
-  "description": "Faster React component for Font Awesome",
+  "description": "Faster React component for Font Awesome, tuned for Font Awesome 7+ and modern React.",
   "version": "4.0.0",
   "type": "module",
   "main": "./dist/index.cjs",
@@ -25,10 +25,10 @@
   "homepage": "https://getzoe.app",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/FortAwesome/react-fontawesome.git"
+    "url": "git+https://github.com/ZoeMejor/react-fontawesome-light.git"
   },
   "bugs": {
-    "url": "https://github.com/FortAwesome/react-fontawesome/issues"
+    "url": "https://github.com/ZoeMejor/react-fontawesome-light/issues"
   },
   "contributors": [
     "Travis Chase <travis@fontawesome.com>",
@@ -65,18 +65,16 @@
     "prepack": "npm run build",
     "test": "jest",
     "test:watch": "jest --watch",
-    "test:prepublish": "npm run install.6 && npm run test && npm run install.7 && npm run test",
+    "test:prepublish": "npm run test",
     "validate": "npm run lint && npm run format:check && npm run validate-types && npm run test",
     "validate-types": "tsc --noEmit",
-    "install.6": "npm --no-save install @fortawesome/fontawesome-svg-core@6.x @fortawesome/free-solid-svg-icons@6.x",
-    "install.7": "npm --no-save install @fortawesome/fontawesome-svg-core@7.x @fortawesome/free-solid-svg-icons@7.x",
     "clean": "rimraf dist"
   },
   "engines": {
     "node": ">=20"
   },
   "peerDependencies": {
-    "@fortawesome/fontawesome-svg-core": "~6 || ~7",
+    "@fortawesome/fontawesome-svg-core": ">=7.0.0",
     "react": "^18.0.0 || ^19.0.0"
   },
   "devDependencies": {
