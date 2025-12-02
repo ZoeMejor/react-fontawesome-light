@@ -23,22 +23,10 @@ const semanticReleaseConfig = {
         preset: 'conventionalcommits',
         presetConfig: ccPresetConfig,
         releaseRules: [
-          {
-            type: 'build',
-            release: 'patch',
-          },
-          {
-            type: 'ci',
-            release: 'patch',
-          },
-          {
-            type: 'chore',
-            release: 'patch',
-          },
-          {
-            type: 'refactor',
-            release: 'patch',
-          },
+          { type: 'build', release: 'patch' },
+          { type: 'ci', release: 'patch' },
+          { type: 'chore', release: 'patch' },
+          { type: 'refactor', release: 'patch' },
         ],
       },
     ],
@@ -56,10 +44,11 @@ const semanticReleaseConfig = {
           '# Changelog\n\nAll notable changes to this project will be documented in this file. See\n[Conventional Commits](https://conventionalcommits.org) for commit guidelines.',
       },
     ],
+    // This is now responsible for `npm publish` using Trusted Publishing.
     [
-      '@semantic-release/exec',
+      '@semantic-release/npm',
       {
-        publishCmd: './scripts/publish.sh ${nextRelease.version}',
+        npmPublish: true,
       },
     ],
     [
