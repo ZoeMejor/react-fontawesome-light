@@ -1,4 +1,5 @@
 import React, { type SVGAttributes } from 'react'
+import '@fortawesome/fontawesome-svg-core/styles.css'
 
 import type { IconDefinition } from '@fortawesome/fontawesome-svg-core'
 
