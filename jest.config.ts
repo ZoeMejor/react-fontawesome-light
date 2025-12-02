@@ -24,12 +24,7 @@ const config: Config = {
   coverageDirectory: 'coverage',
 
   // An array of regexp pattern strings used to skip coverage collection
-  coveragePathIgnorePatterns: [
-    'src/global.d.ts',
-    'src/index.ts',
-    'src/components/__fixtures__',
-    'src/types',
-  ],
+  coveragePathIgnorePatterns: ['src/global.d.ts', 'src/index.ts', 'src/types'],
 
   // Indicates which provider should be used to instrument code for coverage
   coverageProvider: 'v8',

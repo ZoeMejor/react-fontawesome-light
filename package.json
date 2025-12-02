@@ -3,22 +3,14 @@
   "description": "Faster React component for Font Awesome, tuned for Font Awesome 7+ and modern React.",
   "version": "4.0.0",
   "type": "module",
-  "main": "./dist/index.cjs",
+  "main": "./dist/index.js",
   "module": "./dist/index.js",
-  "jsnext:main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
       "import": "./dist/index.js",
-      "require": "./dist/index.cjs",
       "default": "./dist/index.js"
-    },
-    "./CustomPrefixProvider": {
-      "types": "./dist/CustomPrefixProvider.d.ts",
-      "import": "./dist/CustomPrefixProvider.js",
-      "require": "./dist/CustomPrefixProvider.cjs",
-      "default": "./dist/CustomPrefixProvider.js"
     },
     "./package.json": "./package.json"
   },
@@ -134,8 +126,7 @@
     "./CONTRIBUTING.md",
     "./DEVELOPMENT.md",
     "./LICENSE.txt",
-    "./README.md",
-    "./UPGRADING.md"
+    "./README.md"
   ],
   "browserslist": [
     "> 1%",
