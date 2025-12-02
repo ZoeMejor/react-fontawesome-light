@@ -27,7 +27,6 @@ export const FontAwesomeIcon = ({
     display: 'inline-block',
     verticalAlign: '-0.125em',
     height: '1em',
-    width: '1.25em',
     overflow: 'visible',
     ...style,
   }
