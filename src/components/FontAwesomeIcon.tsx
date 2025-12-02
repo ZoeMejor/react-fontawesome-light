@@ -26,6 +26,8 @@ export const FontAwesomeIcon = ({
   const mergedStyle: CSSProperties = {
     display: 'inline-block',
     verticalAlign: '-0.125em',
+    height: '1em',
+    width: '1.25em',
     overflow: 'visible',
     ...style,
   }
@@ -40,8 +42,6 @@ export const FontAwesomeIcon = ({
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox={`0 0 ${viewBoxWidth} ${viewBoxHeight}`}
-      width="1em"
-      height="1em"
       aria-hidden={hasAriaLabel ? undefined : 'true'}
       role={hasAriaLabel ? 'img' : undefined}
       focusable="false"
