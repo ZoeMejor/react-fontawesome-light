@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.0.3](https://github.com/ZoeMejor/react-fontawesome-light/compare/v4.0.2...v4.0.3) (2025-12-02)
+
+### Bug Fixes
+
+* move height and width back to style property ([81167ef](https://github.com/ZoeMejor/react-fontawesome-light/commit/81167ef5563b54181d1482f98696c3ad32e9c4bc))
+
 ## [4.0.2](https://github.com/ZoeMejor/react-fontawesome-light/compare/v4.0.1...v4.0.2) (2025-12-02)
 
 ### Bug Fixes
