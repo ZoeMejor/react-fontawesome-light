@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.0.4](https://github.com/ZoeMejor/react-fontawesome-light/compare/v4.0.3...v4.0.4) (2025-12-02)
+
+### Bug Fixes
+
+* remove width so that aspect ratio is handled by itself ([2d1d0dd](https://github.com/ZoeMejor/react-fontawesome-light/commit/2d1d0ddb6072d2ce0c269a9c6bab4a55db626d84))
+
 ## [4.0.3](https://github.com/ZoeMejor/react-fontawesome-light/compare/v4.0.2...v4.0.3) (2025-12-02)
 
 ### Bug Fixes
