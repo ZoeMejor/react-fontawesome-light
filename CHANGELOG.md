@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.0.5](https://github.com/ZoeMejor/react-fontawesome-light/compare/v4.0.4...v4.0.5) (2025-12-02)
+
+### Bug Fixes
+
+* add content box to constraint size ([2c53b7a](https://github.com/ZoeMejor/react-fontawesome-light/commit/2c53b7a132b202ebce1bd58c655644fb2122fa17))
+
 ## [4.0.4](https://github.com/ZoeMejor/react-fontawesome-light/compare/v4.0.3...v4.0.4) (2025-12-02)
 
 ### Bug Fixes
