@@ -11,6 +11,7 @@ const preset = createDefaultEsmPreset({
  */
 const config: Config = {
   ...preset,
+
   // Automatically clear mock calls, instances, contexts and results before every test
   clearMocks: true,
 
@@ -24,7 +25,7 @@ const config: Config = {
   coverageDirectory: 'coverage',
 
   // An array of regexp pattern strings used to skip coverage collection
-  coveragePathIgnorePatterns: ['src/global.d.ts', 'src/index.ts', 'src/types'],
+  coveragePathIgnorePatterns: ['src/index.ts'],
 
   // Indicates which provider should be used to instrument code for coverage
   coverageProvider: 'v8',

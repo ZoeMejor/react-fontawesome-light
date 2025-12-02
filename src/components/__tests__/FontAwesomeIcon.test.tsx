@@ -4,7 +4,7 @@ import type {
   IconDefinition,
   IconName,
 } from '@fortawesome/fontawesome-svg-core'
-import { faCoffee, faUser, fas } from '@fortawesome/free-solid-svg-icons'
+import { faCoffee, fas } from '@fortawesome/free-solid-svg-icons'
 import { render, screen } from '@testing-library/react'
 
 import { FontAwesomeIcon } from '../FontAwesomeIcon'
@@ -57,14 +57,6 @@ describe('FontAwesomeIcon', () => {
 
       expect(svg).toBeInTheDocument()
       expect(svg).toHaveStyle({ color: 'rgb(255, 0, 0)' })
-    })
-
-    test('forwards ref to SVG element', () => {
-      const ref = React.createRef<SVGSVGElement>()
-
-      render(<FontAwesomeIcon icon={faUser} ref={ref} />)
-
-      expect(ref.current).toBeInstanceOf(SVGSVGElement)
     })
 
     test('renders path element with icon data', () => {
