@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.0.1](https://github.com/ZoeMejor/react-fontawesome-light/compare/v4.0.0...v4.0.1) (2025-12-02)
+
+### Bug Fixes
+
+- adjust default svg size ([1ceb25b](https://github.com/ZoeMejor/react-fontawesome-light/commit/1ceb25b73b019a5855aef60dad0ece31ce2892e1))
+
+> > > > > > > 6a1f567 (chore: fix changelog)
+
 ## 4.0.0 (2025-12-02)
 
 ### Breaking changes
