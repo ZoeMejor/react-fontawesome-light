@@ -10,10 +10,10 @@ All notable changes to this project will be documented in this file. See
 - Require `@fortawesome/fontawesome-svg-core` version `>= 7.0.0`.
 - Remove the CommonJS build. The package is now ESM only.
 - Remove `CustomPrefixProvider` from the public API.
-- Remove RSC entry points and build output.
-- Removed many attributes and reduced API surface area. Now only
-  `icon={'faBed'}` and `icon={bedIcon}` + optional `className` props are supported.
-- Forked from `FortAwesome/react-fontawesome` and republished as `@zoemejor/react-fontawesome-light`.
+- Remove RSC entry points.
+- Removed many attributes and reduced the API surface area. Now only
+  `icon='faBed'` and `icon={bedIcon}` + optional `className` props are supported.
+- Forked from `FortAwesome/react-fontawesome` and republished to `@zoemejor/react-fontawesome-light`.
 
 ## [3.1.0](https://github.com/FortAwesome/react-fontawesome/compare/v3.0.2...v3.1.0) (2025-10-03)
 
