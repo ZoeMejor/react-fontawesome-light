@@ -1,4 +1,4 @@
-import React, { type SVGAttributes, CSSProperties } from 'react'
+import React, { type SVGAttributes } from 'react'
 
 import type { IconDefinition } from '@fortawesome/fontawesome-svg-core'
 
@@ -23,17 +23,16 @@ export const FontAwesomeIcon = ({
   const viewBoxHeight = iconData[1]
   const svgPathData = iconData[4]
 
-  const mergedStyle: CSSProperties = {
-    boxSizing: 'content-box',
-    display: 'inline-block',
-    verticalAlign: '-0.125em',
-    height: '1em',
-    overflow: 'visible',
-    ...style,
-  }
-
   const pathDefinitions =
     typeof svgPathData === 'string' ? [svgPathData] : svgPathData
+
+  const mergedClassName = icon.iconName
+    ? className
+      ? `svg-inline--fa fa-${icon.iconName} ${className}`
+      : `svg-inline--fa fa-${icon.iconName}`
+    : className
+      ? `svg-inline--fa ${className}`
+      : 'svg-inline--fa'
 
   const ariaLabel = (restProps as SVGAttributes<SVGSVGElement>)['aria-label']
   const hasAriaLabel = Boolean(ariaLabel)
@@ -45,8 +44,8 @@ export const FontAwesomeIcon = ({
       aria-hidden={hasAriaLabel ? undefined : 'true'}
       role={hasAriaLabel ? 'img' : undefined}
       focusable="false"
-      className={className}
-      style={mergedStyle}
+      className={mergedClassName}
+      style={style}
       fill="currentColor"
       {...restProps}>
       {pathDefinitions.map((pathDefinition, index) => (

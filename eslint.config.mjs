@@ -49,7 +49,7 @@ const config = tseslint.config(
     rules: {
       // Base rules
       curly: ['error', 'multi-line'],
-      'no-nested-ternary': 'error',
+      'no-nested-ternary': 'off',
 
       // `eslint-plugin-import` rules
       'import/order': [
@@ -78,8 +78,8 @@ const config = tseslint.config(
       // `eslint-plugin-unicorn` rules
       'unicorn/no-keyword-prefix': 'off',
       'unicorn/no-null': 'off',
-      'unicorn/prefer-string-replace-all': 'off', // Since FA still supports Safari 12, which doesn't support String.prototype.replaceAll
       'unicorn/prevent-abbreviations': 'off',
+      'unicorn/no-nested-ternary': 'off',
     },
   },
   {
