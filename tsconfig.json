@@ -14,6 +14,12 @@
     "target": "ES2020",
     "types": ["node", "jest", "@testing-library/jest-dom"]
   },
-  "include": ["src", "tsup.config.ts", "jest.config.ts", "test-setup"],
+  "include": [
+    "src",
+    "tsup.config.ts",
+    "jest.config.ts",
+    "test-setup",
+    "commitlint.config.ts"
+  ],
   "exclude": ["node_modules", "dist", "coverage"]
 }
