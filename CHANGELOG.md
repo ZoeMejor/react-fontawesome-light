@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.0.7](https://github.com/ZoeMejor/react-fontawesome-light/compare/v4.0.6...v4.0.7) (2025-12-02)
+
+### Bug Fixes
+
+* import css styles ([36ec71a](https://github.com/ZoeMejor/react-fontawesome-light/commit/36ec71adf36729cb7a0693079af6e170b6e90385))
+
 ## [4.0.6](https://github.com/ZoeMejor/react-fontawesome-light/compare/v4.0.5...v4.0.6) (2025-12-02)
 
 ### Bug Fixes
