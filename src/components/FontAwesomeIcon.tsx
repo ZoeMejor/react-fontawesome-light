@@ -24,6 +24,7 @@ export const FontAwesomeIcon = ({
   const svgPathData = iconData[4]
 
   const mergedStyle: CSSProperties = {
+    boxSizing: 'content-box',
     display: 'inline-block',
     verticalAlign: '-0.125em',
     height: '1em',
