@@ -27,10 +27,6 @@ export const FontAwesomeIcon = ({
     display: 'inline-block',
     verticalAlign: '-0.125em',
     overflow: 'visible',
-    // 1em means "whatever the specified font-size is"
-    width: '1em',
-    height: '1em',
-    // user styles can override these if they want
     ...style,
   }
 
