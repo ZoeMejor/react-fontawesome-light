@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.0.1](https://github.com/ZoeMejor/react-fontawesome-light/compare/v4.0.0...v4.0.1) (2025-12-02)
+
+### Bug Fixes
+
+* adjust default svg size ([1ceb25b](https://github.com/ZoeMejor/react-fontawesome-light/commit/1ceb25b73b019a5855aef60dad0ece31ce2892e1))
+* test and types ([2eb30d9](https://github.com/ZoeMejor/react-fontawesome-light/commit/2eb30d94a9c33b3db999491824e55bc2e4643575))
+* types by including commit lint file ([5460ea2](https://github.com/ZoeMejor/react-fontawesome-light/commit/5460ea221e6f7d331987e92914e07da7c0ff50b2))
+
+### Chores
+
+* change release flow to trusted publishing ([844a5ba](https://github.com/ZoeMejor/react-fontawesome-light/commit/844a5ba4f65ae3b7273b3db3903e0fa60073da4c))
+* release github action ([37d3eb7](https://github.com/ZoeMejor/react-fontawesome-light/commit/37d3eb7b6f16fe1ebdc803a37ca795d34a43e885))
+* remove stale release notes from changelog ([9147780](https://github.com/ZoeMejor/react-fontawesome-light/commit/914778020e3460cc6b843d1c65847150306eba3f))
+* rename release script ([56a8934](https://github.com/ZoeMejor/react-fontawesome-light/commit/56a89340136ea7f3e412f0ffa8d081af1bf077f3))
+* trigger ci ([fa0cfc6](https://github.com/ZoeMejor/react-fontawesome-light/commit/fa0cfc6ab81c168a6401f216028b877d6182b28c))
+* use npmrc file ([cd3dae0](https://github.com/ZoeMejor/react-fontawesome-light/commit/cd3dae0a290e8adcf603c265e44f53dbf38e2a06))
+
+### CI/CD
+
+* bump semantic release and react ([d61c48d](https://github.com/ZoeMejor/react-fontawesome-light/commit/d61c48da3df62276404890c2577de8613476c686))
+* remove publish script and try to fix trusted publishing ([67d2466](https://github.com/ZoeMejor/react-fontawesome-light/commit/67d2466c9d9c3baa485be16295ec1a9a5f26ebf7))
+
 ## 4.0.0 (2025-12-02)
 
 ### Breaking changes
